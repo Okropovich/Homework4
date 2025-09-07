@@ -17,23 +17,36 @@ public class Main {
         }
         //задача 3
         int normalSpeed = 60;
-        if (normalSpeed >= 60) System.out.println("Если скорость " + normalSpeed + " km можно ездить спокойно");
-        else {
-            System.out.println("Если скорость " + normalSpeed + "придется заплатить штраф ");
+        if (normalSpeed >= 60) {
+            System.out.println("Если скорость " + normalSpeed + " km/h можно ездить спокойно");
+        } else {
+            System.out.println("Если скорость " + normalSpeed + " km/h придется заплатить штраф");
 
         }
         //Задача 4
-        int littlePeople = 5;
-        int middlePeople = 14;
-        int adultPeople = 20;
+        int littlePeople = 5;   // Пример для детсада
+        int middlePeople = 14;  // Пример для школы
+        int adultPeople = 20;   // Пример для университета
+        int workPeople = 25;    // Пример для работы (исправлено: добавлена ;)
 
-        if (littlePeople <= 2 || littlePeople <= 6) ;
-        if (middlePeople <= 7 || middlePeople <= 170) ;
-        if (adultPeople <= 18 || adultPeople <= 24) ;
+// Проверяем возрастные диапазоны независимо для каждого примера
+        if (littlePeople >= 3 && littlePeople <= 6) {
+            System.out.println("Если возраст человека равен " + littlePeople + " то ему нужно ходить в детский сад");
+        }
 
-        System.out.println("Если возраст человека равен " + littlePeople + " то ему нужно ходить в детский сад");
-        System.out.println("Если возраст человека равен " + middlePeople + " то ему нужно ходить в школу");
-        System.out.println("Если возраст человека равен " + adultPeople + "  то его место в университете");
+        if (middlePeople >= 7 && middlePeople <= 17) {
+            System.out.println("Если возраст человека равен " + middlePeople + " то ему нужно ходить в школу");
+        }
+
+        if (adultPeople >= 18 && adultPeople <= 24) {
+            System.out.println("Если возраст человека равен " + adultPeople + " то его место в университете");
+        }
+
+        if (workPeople > 24) {
+            System.out.println("Если возраст человека равен " + workPeople + " то ему пора ходить на работу");
+        } else {
+            System.out.println("Возраст " + workPeople + " не подходит ни под один этап (не >24)");
+        }
         //задача 5
 
         int childrenLittle = 4;
@@ -81,13 +94,18 @@ public class Main {
             System.out.println("Нет вообще мест");
         }
         //Задача 7
-        int one =1;
+        int one = 1;
         int two = 2;
         int three = 3;
-        if (three>two&&three>one)
-            System.out.println("<three> Данное число самое большое из всех");
-        else{
-            System.out.println("Ошибка");
+
+        if (one > two && one > three) {
+            System.out.println("one - Данное число самое большое из всех");
+        } else if (two > one && two > three) {
+            System.out.println("two - Данное число самое большое из всех");
+        } else if (three > one && three > two) {
+            System.out.println("three - Данное число самое большое из всех");
+        } else {
+            System.out.println("Нет уникального наибольшего числа (есть равенства)");
         }
 
     }
